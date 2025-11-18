@@ -31,6 +31,6 @@ jobs:
       - name: Deploy to server
         run: |
           ssh -p $SSH_PORT $SSH_USERNAME@$SSH_HOST << 'EOF'
-            cd {プロジェクトフォルダのパス} || exit
+            cd /v-c.dev/public_html/mr-02.v-c.dev || exit
             git pull origin main || exit
           EOF
