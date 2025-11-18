@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<title>Innovatex - HTML 5 Template Preview</title>
+
+<!-- Fav Icon -->
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link href="assets/css/font-awesome-all.css" rel="stylesheet">
+<link href="assets/css/flaticon.css" rel="stylesheet">
+<link href="assets/css/owl.css" rel="stylesheet">
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
+<link href="assets/css/animate.css" rel="stylesheet">
+<link href="assets/css/nice-select.css" rel="stylesheet">
+<link href="assets/css/elpath.css" rel="stylesheet">
+<link href="assets/css/color.css" rel="stylesheet">
+<link href="assets/css/odometer.css" rel="stylesheet">
+<link href="assets/css/dark-mode.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/module-css/page-title.css" rel="stylesheet">
+<link href="assets/css/module-css/news.css" rel="stylesheet">
+<link href="assets/css/module-css/cta.css" rel="stylesheet">
+<link href="assets/css/module-css/footer.css" rel="stylesheet">
+<link href="assets/css/responsive.css" rel="stylesheet">
+
+</head>
+
+
+<!-- page wrapper -->
+<body>
+
+    <div class="boxed_wrapper inner_page">
+
+        <!-- mouse-pointer -->
+        <div class="mouse-pointer"></div>
+        <!-- mouse-pointer end -->
+
+
+        <div class="toggle-button">
+            <button
+                aria-label="Toggle dark/light theme"
+                id="theme-toggle"
+                type="button"
+                class="text-secondary bg-black/90 dark:bg-backgroundBody/90 rounded-[1px] backdrop-blur-xl dark:text-white focus:outline-none focus:ring-0 focus:ring-gray-200 w-[44px] h-[44px] flex justify-center items-center"
+            >
+                <svg
+                data-testid="geist-icon"
+                id="theme-toggle-dark-icon"
+                fill="#fff"
+                stroke-linejoin="round"
+                viewBox="0 0 16 16"
+                >
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.5 0.25V1V1.5H11L11.75 1.5V3H11H10.5V3.5V4.25H9V3.5V3H8.5H7.75V1.5H8.5H9V1V0.25H10.5ZM3.25514 2.75496C2.33413 3.53491 1.75 4.69972 1.75 6C1.75 8.34721 3.65279 10.25 6 10.25C7.30029 10.25 8.4651 9.66587 9.24505 8.74485C9.16377 8.74827 9.08207 8.74999 9 8.74999C5.82436 8.74999 3.25 6.17563 3.25 2.99999C3.25 2.91792 3.25172 2.83623 3.25514 2.75496ZM0.25 6C0.25 3.51072 1.83142 1.39271 4.042 0.592193L5.00256 1.55275C4.83933 2.00347 4.75 2.49047 4.75 2.99999C4.75 5.3472 6.65279 7.24999 9 7.24999C9.50953 7.24999 9.99653 7.16065 10.4473 6.99743L11.4078 7.95798C10.6073 10.1686 8.48929 11.75 6 11.75C2.82436 11.75 0.25 9.17564 0.25 6Z"
+                    fill="#fff"
+                    transform="translate(2.25, 2.25)"
+                ></path>
+                </svg>
+                <svg
+                id="theme-toggle-light-icon"
+                fill="#000"
+                viewBox="0 0 16 16"
+                data-testid="geist-icon"
+                stroke-linejoin="round"
+                >
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.75 1V0.25H6.25V1V1.25V2H7.75V1.25V1ZM7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9ZM7 10.5C8.933 10.5 10.5 8.933 10.5 7C10.5 5.067 8.933 3.5 7 3.5C5.067 3.5 3.5 5.067 3.5 7C3.5 8.933 5.067 10.5 7 10.5ZM7.75 12V12.75V13V13.75H6.25V13V12.75V12H7.75ZM12 6.25H12.75H13H13.75V7.75H13H12.75H12V6.25ZM1 6.25H0.25V7.75H1H1.25H2V6.25H1.25H1ZM10.0052 2.93414L10.5355 2.40381L10.7123 2.22703L11.2426 1.6967L12.3033 2.75736L11.773 3.28769L11.5962 3.46447L11.0659 3.9948L10.0052 2.93414ZM2.22703 10.7123L1.6967 11.2426L2.75736 12.3033L3.28769 11.773L3.46447 11.5962L3.9948 11.0659L2.93414 10.0052L2.40381 10.5355L2.22703 10.7123ZM2.93414 3.9948L2.40381 3.46447L2.22703 3.28769L1.6967 2.75736L2.75736 1.6967L3.28769 2.22703L3.46447 2.40381L3.9948 2.93414L2.93414 3.9948ZM10.7123 11.773L11.2426 12.3033L12.3033 11.2426L11.773 10.7123L11.5962 10.5355L11.0659 10.0052L10.0052 11.0659L10.5355 11.5962L10.7123 11.773Z"
+                    fill="#000"
+                    transform="translate(1.25, 1.25)"
+                ></path>
+                </svg>
+            </button>
+        </div>
+
+
+        <!-- preloader -->
+        <div class="loader-wrap">
+            <div class="preloader">
+                <div id="handle-preloader" class="handle-preloader">
+                    <div class="animation-preloader">
+                        <div class="txt-loading">
+                            <span data-text-preloader="i" class="letters-loading">
+                                i
+                            </span>
+                            <span data-text-preloader="n" class="letters-loading">
+                                n
+                            </span>
+                            <span data-text-preloader="n" class="letters-loading">
+                                n
+                            </span>
+                            <span data-text-preloader="o" class="letters-loading">
+                                o
+                            </span>
+                            <span data-text-preloader="v" class="letters-loading">
+                                v
+                            </span>
+                            <span data-text-preloader="a" class="letters-loading">
+                                a
+                            </span>
+                            <span data-text-preloader="t" class="letters-loading">
+                                t
+                            </span>
+                            <span data-text-preloader="e" class="letters-loading">
+                                e
+                            </span>
+                            <span data-text-preloader="x" class="letters-loading">
+                                x
+                            </span>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+
+        <!-- main header -->
+        <header id="header" class="main-header">
+            <!-- header-lower -->
+            <div class="header-lower">
+                <div class="shadow-box">
+                    <div class="shadow-1"></div>
+                    <div class="shadow-2"></div>
+                    <div class="shadow-3"></div>
+                    <div class="shadow-4"></div>
+                    <div class="shadow-5"></div>
+                    <div class="shadow-6"></div>
+                </div>
+                <div class="outer-box">
+                    <ul class="links-list">
+                        <li><a href="index-3.html">Email</a></li>
+                        <li><a href="index-3.html">Twitter</a></li>
+                        <li><a href="index-3.html">Behance</a></li>
+                        <li><a href="index-3.html">Linkedin</a></li>
+                    </ul>
+                    <div class="logo-box">
+                        <figure class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                        <figure class="light-logo"><a href="index.html"><img src="assets/images/logo-3.png" alt=""></a></figure>
+                    </div>
+                    <div class="menu-right-content style-two">
+                        <div class="mobile-nav-toggler menu-open">
+                            <i class="icon-bar"></i>
+                            <i class="icon-bar"></i>
+                            <i class="icon-bar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main-header end -->
+
+
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu menu fixed" data-lenis-prevent="true">
+            <div class="content-box">
+                <div class="top-area">
+                    <div class="mobile-logo"><a href="index.html"><img src="assets/images/logo-3.png" alt=""></a></div>
+                    <div class="close-btn menu-close"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
+                        <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z" fill="#fff"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="main-box">
+                    <div class="tabs-box clearfix">
+                        <div class="tab-btn-box">
+                            <ul class="tab-btns tab-buttons clearfix">
+                                <li class="tab-btn" data-tab="#home-menu"><span>Home</span></li>
+                                <li class="tab-btn" data-tab="#pages-menu"><span>Pages</span></li>
+                                <li class="tab-btn" data-tab="#service-menu"><span>Services</span></li>
+                                <li class="tab-btn" data-tab="#project-menu"><span>Project</span></li>
+                                <li class="tab-btn" data-tab="#team-menu"><span>Team</span></li>
+                                <li class="tab-btn active-btn" data-tab="#blog-menu"><span>Blog</span></li>
+                            </ul>
+                        </div>
+                        <div class="tabs-content">
+                            <div class="tab" id="home-menu">
+                                <ul class="sidebar-menu-list clearfix">
+                                    <li><a href="index.html">Creative Agency</a></li>
+                                    <li><a href="index-2.html">Personal Agency</a></li>
+                                    <li><a href="index-3.html">SEO Agency</a></li>
+                                    <li><a href="index-4.html">Digital Marketing Agency</a></li>
+                                    <li><a href="index-5.html">Photography agency</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab" id="pages-menu">
+                                <ul class="sidebar-menu-list clearfix">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="testimonials.html">Testimonials</a></li>
+                                    <li><a href="pricing.html">Pricing</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="error.html">404</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab" id="service-menu">
+                                <ul class="sidebar-menu-list clearfix">
+                                    <li><a href="service.html">Our Services</a></li>
+                                    <li><a href="service-details.html">Web Design</a></li>
+                                    <li><a href="service-details-2.html">Content Marketing</a></li>
+                                    <li><a href="service-details-3.html">Social Media Marketing</a></li>
+                                    <li><a href="service-details-4.html">PPC Marketing</a></li>
+                                    <li><a href="service-details-5.html">Link Building </a></li>
+                                </ul>
+                            </div>
+                            <div class="tab" id="project-menu">
+                                <ul class="sidebar-menu-list clearfix">
+                                    <li><a href="project.html">Our Projects</a></li>
+                                    <li><a href="project-details.html">Project Details</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab" id="team-menu">
+                                <ul class="sidebar-menu-list clearfix">
+                                    <li><a href="team.html">Our Team</a></li>
+                                    <li><a href="team-details.html">Team Details</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab active-tab" id="blog-menu">
+                                <ul class="sidebar-menu-list clearfix">
+                                    <li><a href="blog.html" class="current">Blog Grid</a></li>
+                                    <li><a href="blog-2.html">Blog Grid Sidebar</a></li>
+                                    <li><a href="blog-3.html">Blog Standard</a></li>
+                                    <li><a href="blog-4.html">Blog Standard Sidebar</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                    <li><a href="blog-details-2.html">Blog Details Sidebar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-area">
+                    <p>Copyright 2025 &copy; All Rights Reserved.</p>
+                    <ul class="links-list">
+                        <li><a href="index.html">Facebook</a></li>
+                        <li><a href="index.html">Twitter</a></li>
+                        <li><a href="index.html">Behance</a></li>
+                        <li><a href="index.html">Linkedin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Mobile Menu -->
+
+
+        <!-- main-content -->
+        <main class="main-content">
+
+
+            <!-- page-title -->
+            <section class="page-title p_relative centred pb_60">
+                <div class="auto-container">
+                    <div class="content-box">
+                        <div class="sub-title">Blog</div>
+                        <h2>Latest Articles</h2>
+                        <a href="contact.html" class="theme-btn theme-bg">
+                            <div class="static-text"><span class="dot"></span><span>Let's Contact</span></div>
+                            <div class="overlay-text"><span class="dot"></span><span>Let's Contact</span></div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- page-title end -->
+
+
+            <!-- news-section -->
+            <section class="news-section p_relative pb_70">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-1.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Innovation</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>Global trends that inspire bold</span><br /><span>ideas</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-2.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Branding</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>What’s moving the world & the </span><br /><span>brands within it</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-3.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Innovation</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>Insights & Innovation from across </span><br /><span>the globe</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-11.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Category</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>Global news through a creative</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-12.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Keyword strategy</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>SEO & content marketing</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-13.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Google Ads</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>Paid media & Advertising</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-14.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Engagement</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>Social Media Marketing</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-15.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Campaign</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>Case Studies & Success Stories</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-16.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Ranks</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>How to create content that ranks</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-17.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Keywords</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>The secret to targeted traffic</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-18.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Branding</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>Pillar Pages vs. Blog Posts.</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one reveal-me">
+                                <div class="inner-box">
+                                    <figure class="image-box"><a href="blog-details.html"><img src="assets/images/news/news-19.jpg" alt=""></a></figure>
+                                    <div class="lower-content">
+                                        <ul class="post-info">
+                                            <li><span class="sub-title">Campaign</span></li>
+                                            <li>5 min read</li>
+                                        </ul>
+                                        <h3><a href="blog-details.html"><span>What to Do After the First Win</span></a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                                        <div class="btn-box">
+                                            <a href="blog-details.html" class="theme-btn border-btn">
+                                                <div class="static-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                                <div class="overlay-text"><span>Read more</span><span class="fas fa-angle-right"></span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- news-section end -->
+
+
+            <!-- cta-section -->
+            <section class="cta-section p_relative centred pt_100 pb_200">
+                <div class="auto-container">
+                    <div class="content-box reveal-me">
+                        <h2>Let’s Work Together</h2>
+                        <a href="contact.html" class="theme-btn theme-bg">
+                            <div class="static-text"><span class="dot"></span><span>Let's Contact</span></div>
+                            <div class="overlay-text"><span class="dot"></span><span>Let's Contact</span></div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- cta-section end -->
+
+        </main>
+        <!-- main-content end -->
+
+
+        <!-- footer-style-two -->
+        <footer class="footer-style-two">
+            <div class="auto-container">
+                <div class="widget-section p_relative pb_40">
+                    <div class="logo-widget footer-widget">
+                        <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo-4.png" alt=""></a></figure>
+                        <figure class="footer-logo-dark"><a href="index.html"><img src="assets/images/logo-5.png" alt=""></a></figure>
+                    </div>
+                    <div class="links-widget footer-widget">
+                        <ul class="links-list clearfix">
+                            <li><a href="index.html">Home 1</a></li>
+                            <li><a href="index-2.html">Home 2</a></li>
+                            <li><a href="index-3.html">Home 3</a></li>
+                            <li><a href="index-4.html">Home 4</a></li>
+                            <li><a href="index-5.html">Home 5</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-widget footer-widget">
+                        <div class="border-line"></div>
+                        <div class="widget-title">
+                            <h3>Inners</h3>
+                        </div>
+                        <div class="widget-section">
+                            <ul class="links-list clearfix">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="project.html">Project</a></li>
+                                <li><a href="service.html">Service</a></li>
+                                <li><a href="blog.html">Article</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="blog-details.html">Single</a></li>
+                                <li><a href="project-details.html">Project Single</a></li>
+                                <li><a href="service-details.html">Service Single</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="links-widget footer-widget">
+                        <div class="border-line"></div>
+                        <div class="widget-title">
+                            <h3>Utility</h3>
+                        </div>
+                        <div class="widget-section">
+                            <ul class="links-list clearfix">
+                                <li><a href="index-3.html">Style Guide</a></li>
+                                <li><a href="index-3.html">License</a></li>
+                                <li><a href="index-3.html">Change Log</a></li>
+                                <li><a href="index-3.html">Password Protected</a></li>
+                                <li><a href="error.html">404</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="subscribe-widget footer-widget">
+                        <div class="border-line"></div>
+                        <div class="widget-title">
+                            <h3>Subscribe to get updates </h3>
+                        </div>
+                        <div class="widget-content">
+                            <p>We won’t give your details to third party</p>
+                            <form action="contact.html" method="post">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Enter your mail" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="theme-btn theme-bg">
+                                        <span class="static-text"><span>Subscribe</span></span>
+                                        <span class="overlay-text"><span>Subscribe</span></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>  
+                <div class="footer-bottom-two centred">
+                    <div class="bottom-inner">
+                        <ul class="links-list">
+                            <li><a href="index-3.html">Instagram</a></li>
+                            <li><a href="index-3.html">Linkedin</a></li>
+                            <li><a href="index-3.html">Youtube</a></li>
+                            <li><a href="index-3.html">Discord</a></li>
+                        </ul>
+                        <p>Copyright 2025 @ All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-style-two end -->
+
+
+
+        <!--Scroll to top-->
+        <div class="scroll-to-top">
+            <svg class="scroll-top-inner" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+        
+    </div>
+
+   
+    <!-- jequery plugins -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/scrolltop.min.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/ScrollTrigger.js"></script>
+    <script src="assets/js/SplitText.js"></script>
+    <script src="assets/js/odometer.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/headroom.min.js"></script>
+    <script src="assets/js/vanila-marquee.min.js"></script>
+    <script src="assets/js/lenis.min.js"></script>
+    <script src="assets/js/plagin.js"></script>
+
+    <!-- main-js -->
+    <script src="assets/js/script.js"></script>
+
+</body><!-- End of .page_wrapper -->
+</html>
