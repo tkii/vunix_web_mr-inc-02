@@ -1,36 +1,22 @@
-name: Deploy to Server
-
+name: Release to Develop Environment
 on:
   push:
     branches:
-      - main  # mainブランチにpushされたときに実行
+      - main
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest  # 実行するOSを指定
-    env: # GitHub Secretsから取得した内容で環境変数を設定
-      SSH_HOST: ${{ secrets.SSH_HOST }}
-      SSH_PORT: ${{ secrets.SSH_PORT }}
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
-
+  job1:
+    name: Deploy
+    runs-on: ubuntu-latest
     steps:
-      # コードを取得
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      # SSH接続用キーファイルを設定
-      - name: Set up SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -p $SSH_PORT -H $SSH_HOST >> ~/.ssh/known_hosts
-
-      # SSH接続を行い、Xserver上でpullしてデプロイを行う
-      - name: Deploy to server
-        run: |
-          ssh -p $SSH_PORT $SSH_USERNAME@$SSH_HOST << 'EOF'
-            cd /v-c.dev/public_html/mr-02.v-c.dev || exit
-            git pull origin main || exit
-          EOF
+      - name: ssh and deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            cd /home/xs870764/v-c.dev/public_html/mr-01.v-c.dev
+            git checkout main
+            git pull origin main
