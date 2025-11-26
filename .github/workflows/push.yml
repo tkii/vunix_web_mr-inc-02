@@ -17,6 +17,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /home/xs870764/v-c.dev/public_html/mr-01.v-c.dev
+            cd /home/xs870764/v-c.dev/public_html/mr-02.v-c.dev
             git checkout main
             git pull origin main
